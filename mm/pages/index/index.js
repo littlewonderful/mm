@@ -6,7 +6,7 @@ Page({
    */
   data: {
     timer: '',
-    second:0,
+    second:58,
     min:0,
   },
 
@@ -18,11 +18,15 @@ Page({
   },
   onCount: function() {
     var second=this.data.second;
+    var min=this.data.min;
     console.log(second);
+    // min = parseInt(second/60);
+    // console.log(min);
     var that=this;
     this.timer=setTimeout(function(){
       that.setData({
-        second:second+1
+        second:second+1,
+        min: parseInt(second / 60)
       });
      that.onCount(that);
     },1000)
