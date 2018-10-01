@@ -6,7 +6,7 @@
     <text class='text-title'>学霸喵</text>
   </view>
   <view class='time-container'>
-  <text class='text-time-container'>{{min}}:{{second}}</text>
+  <text class='text-time-container'>{{min}}:{{sec}}</text>
   </view>
   <!-- //显示时间的容器// -->
   <view class='control-containter'>
