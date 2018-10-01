@@ -23,16 +23,12 @@ Page({
     var min=this.data.min;
     console.log(second);
    
-    // if(second<60){
-    //   sec=second;
-    // }else{
-    //   sec=second-min*60;
-    // }
     var that=this;
     this.timer=setTimeout(function(){
       that.setData({
-        sec:sec+1,
-        min: parseInt(second / 60)
+        second: second + 1,
+        min: parseInt(second / 60),
+        sec:second - (min * 60),
       });
      that.onCount(that);
     },1000)
