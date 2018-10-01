@@ -6,15 +6,14 @@
     <text class='text-title'>学霸喵</text>
   </view>
   <view class='time-container'>
-  <text class='text-time-container'>计时器</text>
   </view>
   <!-- //显示时间的容器// -->
   <view class='control-containter'>
     <view class='pause'>
-      <text class='text-pause'>暂停</text>
+      <text class='text-pause' bindtap='onStop'>停止</text>
     </view>
     <view class='start'>
-      <text class='text-start'>开始</text>
+      <text class='text-start' bindtap='onCount'>开始</text>
     </view>
   </view>
   <!-- 开始/停止 暂停/继续 键 -->
