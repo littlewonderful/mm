@@ -6,40 +6,41 @@ Page({
    */
   data: {
     timer: '',
-    second:0,
-    sec:0,
-    min:0,
+    second: 0,
+    sec: 0,
+    min: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-  
+
   },
   onCount: function() {
-    var second=this.data.second;
-    var sec=this.data.sec;
-    var min=this.data.min;
+    var second = this.data.second;
+    var sec = this.data.sec;
+    var min = this.data.min;
     console.log(second);
-   
-    var that=this;
-    this.timer=setTimeout(function(){
+    min = parseInt(second / 60);
+    this.setData({
+      sec: second - (min * 60),
+      min: min,
+    })
+    var that = this;
+    this.timer = setTimeout(function() {
       that.setData({
         second: second + 1,
-        sec:second - (min * 60),
-        min: parseInt(second / 60),
       });
-   
-     that.onCount(that);
-    },1000)
+      that.onCount(that);
+    }, 1000)
   },
-  onStop:function(){
-    var timer=this.data.timer;
-    var second=this.data.second;
+  onStop: function() {
+    var timer = this.data.timer;
+    var second = this.data.second;
     clearTimeout(this.timer);
     this.setData({
-      second:0
+      second: 0
     })
   },
 
