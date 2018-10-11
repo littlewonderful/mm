@@ -40,7 +40,9 @@ Page({
     var second = this.data.second;
     clearTimeout(this.timer);
     this.setData({
-      second: 0
+      second: 0,
+      sec:0,
+      min:0
     })
   },
 
