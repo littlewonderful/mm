@@ -44,6 +44,10 @@ Page({
       sec:0,
       min:0
     })
+    this.tips()
+  },
+  tips:function(){
+    console.log("tishi")
   },
 
   /**
